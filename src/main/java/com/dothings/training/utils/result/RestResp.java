@@ -1,11 +1,12 @@
 package com.dothings.training.utils.result;
 
 
-
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@JsonSerialize(include= JsonSerialize.Inclusion.NON_NULL)
 public class RestResp<T> {
 	
 	private Integer code = 200;
