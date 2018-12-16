@@ -8,11 +8,11 @@ import com.baomidou.mybatisplus.annotations.TableField;
 
 @ApiModel(value = "通用消息提醒返回")
 public abstract class BaseEntity<T extends Model>  extends Model<T>{
-	@ApiModelProperty(value = "消息代码，大于100小于999，含义参照HTTP Status", required = true)
+	@ApiModelProperty(value = "消息代码，大于100小于999，含义参照HTTP Status")
 	@TableField(exist = false)
 	private int success = 200;// 大于100小于999
 	@TableField(exist = false)
-	@ApiModelProperty(value = "消息正文", required = true)
+	@ApiModelProperty(value = "消息正文")
 	private String message = null;
 
 //	@Transient

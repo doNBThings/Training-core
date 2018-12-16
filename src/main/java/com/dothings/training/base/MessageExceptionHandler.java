@@ -28,7 +28,7 @@ public class MessageExceptionHandler {
      *
      */
     @ExceptionHandler(MessageException.class)
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    //@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ResponseBody
     public Status notFount(MessageException e) {
         log.info("业务异常:", e);
@@ -40,7 +40,7 @@ public class MessageExceptionHandler {
      *
      */
     @ExceptionHandler(Exception.class)
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    //@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ResponseBody
     public Status notFount(Exception e) {
         log.error("运行时异常:", e);
